@@ -36,6 +36,7 @@ function onreadfile(err, data) {
 }
 ```
 De directory van een specefiek path krijgen 
+
   
   ```
   var path = require('path')
@@ -48,7 +49,16 @@ Package maken
  npm-init --yes
   
 ```
-![](https://imgur.com/a/mxDpv)
+#### Require van een path
+
+Meer over require en node modules 
+[Lecture Require](https://docs.google.com/presentation/d/16uT5GMOcTcs2xcbqvlCb3RetpFATil5nmXyZK7uvEdc/edit#slide=id.g32b61634d9_0_400)
+
+```
+var sum = require('../sum')
+```
+
+![URL eplained](https://imgur.com/a/mxDpv)
 
 
 http status codes: [link](https://httpstatuses.com/)
@@ -84,13 +94,7 @@ client.on('connectionerror', onconnectionerror)
 client.on('disconnect', ondisconnect)
 client.on('message', onmessage)
 client.connect('http://mychatserver.com')
-
-
 ```
-
-
-
-
  #### Templates
  
  syntax:  ```<h1> <% data.title %> </h1> ```
@@ -161,7 +165,6 @@ express()
   .use(notFound)
   .listen(8000)
 
-
 ```
 #### The function to grab the data from lecture 4
 [Lecture 4](https://docs.google.com/presentation/d/1PfEaV-jQdqKWByca9txp38yD8LWIDEWZzldNYBMwUNI/edit#slide=id.g3230fb1b6e_0_355)
@@ -183,14 +186,11 @@ function add(req, res) {
   res.redirect('/' + id)
 }
 ```
-
-
 #### Serve static files
 In je index.js
 Om bijvoorbeeld afbeeldingen te hosten kan je in express zeggen
 Zorg er wel voor dat je afbeeldingen ook echt in die map zitten 
 ```.use(express.static('public/images'));```
-
 
 #### Error Handling Express
 
