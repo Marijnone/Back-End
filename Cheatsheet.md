@@ -17,6 +17,8 @@ function onrequest(req, res) {
 ```
 Lezen van een text file als je bijvoorbeeld "echo Hallo allemaal > in.txt" zou uitvoeren, dan kan node dit uitlezen met de volgende code.
 
+[Streams lecture](https://docs.google.com/presentation/d/16uT5GMOcTcs2xcbqvlCb3RetpFATil5nmXyZK7uvEdc/edit#slide=id.g32b61634d9_0_77)
+Voorbeeld van een stream
 ```
 var fs = require('fs')
 var read = fs.createReadStream
@@ -24,13 +26,6 @@ var read = fs.createReadStream
 read('in.txt')
   .pipe(process.stdout)
   ```
-  De directory van een specefiek path krijgen 
-  
-  ```
-  var path = require('path')
-path.dirname('~/backend/index.js')
-//=> '~/backend' 
-```
 Lezen van een file zonder stream
 ```
 var fs = require('fs')
@@ -39,6 +34,13 @@ function onreadfile(err, data) {
   if (err) throw err
   console.log('Data: ', data)
 }
+```
+De directory van een specefiek path krijgen 
+  
+  ```
+  var path = require('path')
+path.dirname('~/backend/index.js')
+//=> '~/backend' 
 ```
 Package maken 
 
@@ -67,6 +69,9 @@ function onhome(req, res) {
 #### Callbacks
 >In computer programming, a callback is a piece of executable code that is passed as an argument to other code, which is expected to call back (execute) the argument at some convenient time. The invocation may be immediate as in a synchronous callback or it might happen at later time, as in an asynchronous callback.>
 
+```
+app.get('/',calback)
+ ```
 
 
 #### Events
@@ -85,9 +90,7 @@ client.connect('http://mychatserver.com')
 
 
 
-```
-app.get('/',calback)
- ```
+
  #### Templates
  
  syntax:  ```<h1> <% data.title %> </h1> ```
