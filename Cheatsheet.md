@@ -17,7 +17,7 @@ function onrequest(req, res) {
 ```
 Lezen van een text file als je bijvoorbeeld "echo Hallo allemaal > in.txt" zou uitvoeren, dan kan node dit uitlezen met de volgende code.
 
-[Streams lecture](https://docs.google.com/presentation/d/16uT5GMOcTcs2xcbqvlCb3RetpFATil5nmXyZK7uvEdc/edit#slide=id.g32b61634d9_0_77)
+[Streams lecture 2](https://docs.google.com/presentation/d/16uT5GMOcTcs2xcbqvlCb3RetpFATil5nmXyZK7uvEdc/edit#slide=id.g32b61634d9_0_77)
 Voorbeeld van een stream
 ```
 var fs = require('fs')
@@ -52,7 +52,7 @@ Package maken
 #### Require van een path
 
 Meer over require en node modules 
-[Lecture Require](https://docs.google.com/presentation/d/16uT5GMOcTcs2xcbqvlCb3RetpFATil5nmXyZK7uvEdc/edit#slide=id.g32b61634d9_0_400)
+[Lecture 2 Require](https://docs.google.com/presentation/d/16uT5GMOcTcs2xcbqvlCb3RetpFATil5nmXyZK7uvEdc/edit#slide=id.g32b61634d9_0_400)
 
 ```
 var sum = require('../sum')
@@ -124,7 +124,7 @@ function notFound(req, res) {
 
 #### Formulieren
 
-[Slides week 4](https://docs.google.com/presentation/d/1PfEaV-jQdqKWByca9txp38yD8LWIDEWZzldNYBMwUNI/edit#slide=id.g3230fb1b6e_0_395)
+[lecture week 4](https://docs.google.com/presentation/d/1PfEaV-jQdqKWByca9txp38yD8LWIDEWZzldNYBMwUNI/edit#slide=id.g3230fb1b6e_0_395)
 ``` <title>Add a movie - My movie website</title>
 <h1>Add a new movie</h1>
 <form action=/ method=post>
