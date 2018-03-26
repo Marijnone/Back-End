@@ -136,10 +136,57 @@ function notFound(req, res) {
   <button>Add</button>
 </form>
 
+```
+#### Body-parser
 
+```
+var slug = require('slug')
+var bodyParser = require('body-parser')
+
+
+…
+
+express()
+  .use(express.static('static'))
+  .use(bodyParser.urlencoded({extended: true}))
+  .set('view engine', 'ejs')
+  .set('views', 'view')
+  .get('/', movies)
+  .post('/', add)
+  .get('/add', form)
+  .get('/:id', movie)
+  .use(notFound)
+  .listen(8000)
 
 
 ```
+#### The function to grab the data from lecture 4
+[Lecture 4](https://docs.google.com/presentation/d/1PfEaV-jQdqKWByca9txp38yD8LWIDEWZzldNYBMwUNI/edit#slide=id.g3230fb1b6e_0_355)
+```
+function form(req, res) {
+  res.render('add.ejs')
+}
+
+function add(req, res) {
+  var id = slug(req.body.title).toLowerCase()
+
+  data.push({
+    id: id,
+    title: req.body.title,
+    plot: req.body.plot,
+    description: req.body.description
+  })
+
+  res.redirect('/' + id)
+}
+```
+
+
+#### Serve static files
+In je index.js
+Om bijvoorbeeld afbeeldingen te hosten kan je in express zeggen
+Zorg er wel voor dat je afbeeldingen ook echt in die map zitten 
+```.use(express.static('public/images'));```
 
 
 #### Error Handling Express
