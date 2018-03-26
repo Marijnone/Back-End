@@ -201,6 +201,17 @@ app.use(function (err, req, res, next) {
 })
 
 ```
+Of zo
+```
+function done(err, data) {
+    if (err) {
+      next(err);
+    } else {
+      res.redirect("/dier/" + data.insertId);
+      console.log(data.insertId);
+    }
+
+```
 #### Middelware
 
 ```
