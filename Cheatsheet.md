@@ -89,7 +89,8 @@ client.connect('http://mychatserver.com')
 app.get('/',calback)
  ```
  #### Templates
- syntax:  <h1> <% data.title %> </h1>
+ 
+ syntax:  ```<h1> <% data.title %> </h1> ```
  
  Gebruik van een template en het renderen hiervan
  
@@ -137,5 +138,16 @@ function notFound(req, res) {
 
 
 
+
+```
+
+
+#### Error Handling Express
+
+```
+app.use(function (err, req, res, next) {
+  console.error(err.stack)
+  res.status(500).send('Something broke!')
+})
 
 ```
