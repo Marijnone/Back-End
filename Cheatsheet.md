@@ -49,4 +49,4 @@ Package maken
 ![](https://imgur.com/a/mxDpv)
 
 
-http status codes: [](https://httpstatuses.com/)
+http status codes: [link](https://httpstatuses.com/)
