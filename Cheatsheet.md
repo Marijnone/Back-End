@@ -151,3 +151,31 @@ app.use(function (err, req, res, next) {
 })
 
 ```
+#### Middelware
+
+```
+app.use()=req, res, next> {
+
+```
+
+Wat doet next? Next maakt het mogelijk om express (middelware/ app) te vertellen wanneer hij naar de vogende functie mag gaan.
+Stel je hebt onderstaande code dit is een lege functie
+```
+app.use()=req, res, next> {
+
+```
+Als je nu je pagina zou vernieuwen toont hij de pagina maar chrome blijft laden.
+Door de code te wijzigen naar:
+```
+app.use()=req, res, next> {
+next()
+```
+Gaat de code netjes verder na deze functie.
+
+
+
+#### Link naar Lynda en Udemy 
+[Lynda express](https://www.lynda.com/Node-js-tutorials/Initial-server-files-folders/633869/671247-4.html?srchtrk=index%3a2%0alinktypeid%3a2%0aq%3aexpress.js%0apage%3a1%0as%3arelevance%0asa%3atrue%0aproducttypeid%3a2)
+
+[Udemy Express ](https://www.udemy.com/the-complete-nodejs-developer-course-2/learn/v4/t/lecture/5525322?start=0)
+
